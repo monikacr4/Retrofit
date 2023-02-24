@@ -67,7 +67,9 @@ fun Login(loginVM: LoginVM) {
         CustomOutlinedField(value = loginVM.userPassword,
             onValueChange = {loginVM.passwordChange(it)},
             placeholder = "Password",
-            isPassword = true)
+            isPassword = true,
+            isPasswordVisible =!loginVM.isPasswordVisible,
+            onVisibilityChange = {loginVM.isPasswordVisible=it} )
         Spacer(modifier = Modifier.padding(16.dp))
         Button(onClick = { context.startActivity(Intent(context, MainActivity::class.java)) },
             Modifier.fillMaxWidth()) {

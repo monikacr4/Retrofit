@@ -9,6 +9,7 @@ import androidx.lifecycle.AndroidViewModel
 class LoginVM: AndroidViewModel(Application()) {
     var userEmail by mutableStateOf("")
     var userPassword by mutableStateOf("")
+    var isPasswordVisible by mutableStateOf(true)
 
     fun passwordChange(NewString: String){
         userPassword = NewString

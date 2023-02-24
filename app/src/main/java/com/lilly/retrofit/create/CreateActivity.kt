@@ -70,7 +70,9 @@ fun CreateAccount(createVM:CreateVM) {
         CustomOutlinedField(value = createVM.password,
             onValueChange = {createVM.onPasswordChange(it)},
             placeholder = "Password",
-            isPassword = true)
+            isPassword = true,
+            isPasswordVisible =!createVM.isPasswordVisible,
+            onVisibilityChange = {createVM.isPasswordVisible=it} )
         Spacer(modifier = Modifier.padding(20.dp))
         Button(onClick = { context.startActivity(Intent(context, MainActivity::class.java)) },
         Modifier.fillMaxWidth()) {

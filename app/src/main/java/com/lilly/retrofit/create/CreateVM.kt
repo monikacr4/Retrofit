@@ -10,6 +10,7 @@ class CreateVM(): AndroidViewModel(Application()) {
     var name by mutableStateOf("")
     var password by mutableStateOf("")
     var email by mutableStateOf("")
+    var isPasswordVisible by mutableStateOf(true)
 
     fun onNameChange(NewString: String){
         name = NewString
